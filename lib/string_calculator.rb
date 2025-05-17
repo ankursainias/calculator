@@ -26,5 +26,19 @@ class Calculator
       string = string[(delimiter_end + 1)..]
     end
 
+    # Step 4: Parse numbers and validate
+    numbers = []
+    current_number = ""
+    
+    string.each_char do |char|
+      if delimiters.include?(char)
+        numbers << current_number.to_i unless current_number.empty?
+        current_number = ""
+      else
+        current_number << char
+      end
+    end
+    
+    numbers << current_number.to_i unless current_number.empty?    
   end
 end
