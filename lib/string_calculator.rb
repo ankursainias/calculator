@@ -39,6 +39,14 @@ class Calculator
       end
     end
     
-    numbers << current_number.to_i unless current_number.empty?    
+    numbers << current_number.to_i unless current_number.empty?
+
+    # Step 5: Validate negative numbers
+    negative_numbers = numbers.select { |n| n < 0 }
+    if negative_numbers.any?
+      raise NegativeNumberError, "negative numbers not allowed #{negative_numbers.join(', ')}"
+    end
+
+    numbers.sum
   end
 end
