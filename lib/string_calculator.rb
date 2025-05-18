@@ -35,7 +35,7 @@ class StringCalculator
         numbers << current_number.to_i unless current_number.empty?
         current_number = ""
       else
-        current_number << char
+        current_number = current_number + char
       end
     end
     
