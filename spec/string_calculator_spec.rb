@@ -29,5 +29,10 @@ RSpec.describe StringCalculator do
     it 'supports custom single delimiter' do
       expect(calculator.add("//;\n1;2")).to eq(3)
     end
+
+    # 6. multiple custom delimiters
+    it 'supports multiple custom delimiters' do
+      expect(calculator.add("//[;][*]\n1;2*3")).to eq(6)
+    end
   end
 end
