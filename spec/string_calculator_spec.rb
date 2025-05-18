@@ -24,5 +24,10 @@ RSpec.describe StringCalculator do
     it 'returns the sum of two numbers with new line' do
       expect(calculator.add("1\n2,3")).to eq(6)
     end
+
+    # 5. custom single delimiter
+    it 'supports custom single delimiter' do
+      expect(calculator.add("//;\n1;2")).to eq(3)
+    end
   end
 end
