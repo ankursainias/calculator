@@ -3,4 +3,7 @@ require_relative '../lib/string_calculator'
 
 RSpec.describe StringCalculator do
   subject(:calculator) { described_class.new }
+
+  describe '#add' do
+  end
 end
