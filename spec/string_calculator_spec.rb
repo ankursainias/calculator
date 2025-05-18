@@ -1,5 +1,6 @@
 require 'spec_helper'
-require_relative '../lib/calculator/calculator'
+require_relative '../lib/string_calculator'
 
-RSpec.describe Calculator::StringCalculator do
+RSpec.describe StringCalculator do
+
 end

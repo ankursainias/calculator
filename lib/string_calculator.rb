@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Calculator
+class StringCalculator
   class NegativeNumberError < StandardError; end
 
   def add(string)
